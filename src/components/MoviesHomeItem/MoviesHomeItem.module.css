@@ -1,0 +1,8 @@
+.item {
+  color: black;
+  line-height: 0.5;
+}
+
+.item:hover {
+  color: orangered;
+}
