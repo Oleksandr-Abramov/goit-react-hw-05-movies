@@ -17,6 +17,10 @@ export const Movies = () => {
 
   const handleSubmit = evt => {
     evt.preventDefault();
+    if (!input) {
+      alert('Enter something');
+      return;
+    }
     const querySearch = input !== '' ? { query: input } : {};
     setSearchParams(querySearch);
     setInput('');

@@ -5,6 +5,7 @@ import s from './App.module.css';
 import { Cast } from './Cast/Cast';
 import { Reviews } from './Reviews/Reviews';
 import { lazy, Suspense } from 'react';
+import { NotFound } from 'pages/NotFound/NotFound';
 
 const MovieDetailsLazy = lazy(() => import('../pages/MovieDetails'));
 
@@ -43,6 +44,7 @@ export const App = () => {
           <Route path="cast" element={<Cast />} />
           <Route path="reviews" element={<Reviews />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
